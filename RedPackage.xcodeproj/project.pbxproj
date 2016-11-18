@@ -21,6 +21,12 @@
 		F129EC6B1DDEB13C00D5E9FF /* LuckyRedPacketViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F129EC661DDEB13C00D5E9FF /* LuckyRedPacketViewController.xib */; };
 		F129EC6C1DDEB13C00D5E9FF /* UnluckyRedPacketViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F129EC681DDEB13C00D5E9FF /* UnluckyRedPacketViewController.m */; };
 		F129EC6D1DDEB13C00D5E9FF /* UnluckyRedPacketViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F129EC691DDEB13C00D5E9FF /* UnluckyRedPacketViewController.xib */; };
+		F129EC731DDEB39F00D5E9FF /* OpeningRedPacketViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F129EC711DDEB39F00D5E9FF /* OpeningRedPacketViewController.m */; };
+		F129EC741DDEB39F00D5E9FF /* OpeningRedPacketViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F129EC721DDEB39F00D5E9FF /* OpeningRedPacketViewController.xib */; };
+		F129EC781DDEB3C500D5E9FF /* OpenRedPacketEndViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F129EC761DDEB3C500D5E9FF /* OpenRedPacketEndViewController.m */; };
+		F129EC791DDEB3C500D5E9FF /* OpenRedPacketEndViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F129EC771DDEB3C500D5E9FF /* OpenRedPacketEndViewController.xib */; };
+		F129EC7D1DDEE46700D5E9FF /* OpenErrorRedPacketViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F129EC7B1DDEE46700D5E9FF /* OpenErrorRedPacketViewController.m */; };
+		F129EC7E1DDEE46700D5E9FF /* OpenErrorRedPacketViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F129EC7C1DDEE46700D5E9FF /* OpenErrorRedPacketViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,16 +63,25 @@
 		F10B29C21DDD85CB00E5E4CE /* RedPackageUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RedPackageUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F10B29C61DDD85CB00E5E4CE /* RedPackageUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RedPackageUITests.m; sourceTree = "<group>"; };
 		F10B29C81DDD85CB00E5E4CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F10B29D51DDD88CF00E5E4CE /* SendRedPackagewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendRedPackagewController.h; sourceTree = "<group>"; };
-		F10B29D61DDD88CF00E5E4CE /* SendRedPackagewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendRedPackagewController.m; sourceTree = "<group>"; };
-		F129EC551DDEACD700D5E9FF /* OpenRedPacketViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenRedPacketViewController.h; sourceTree = "<group>"; };
-		F129EC561DDEACD700D5E9FF /* OpenRedPacketViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenRedPacketViewController.m; sourceTree = "<group>"; };
+		F10B29D51DDD88CF00E5E4CE /* SendRedPackagewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SendRedPackagewController.h; path = ../SendRedPackagewController.h; sourceTree = "<group>"; };
+		F10B29D61DDD88CF00E5E4CE /* SendRedPackagewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SendRedPackagewController.m; path = ../SendRedPackagewController.m; sourceTree = "<group>"; };
+		F129EC551DDEACD700D5E9FF /* OpenRedPacketViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OpenRedPacketViewController.h; path = ../OpenRedPacketViewController.h; sourceTree = "<group>"; };
+		F129EC561DDEACD700D5E9FF /* OpenRedPacketViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OpenRedPacketViewController.m; path = ../OpenRedPacketViewController.m; sourceTree = "<group>"; };
 		F129EC641DDEB13C00D5E9FF /* LuckyRedPacketViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LuckyRedPacketViewController.h; sourceTree = "<group>"; };
 		F129EC651DDEB13C00D5E9FF /* LuckyRedPacketViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LuckyRedPacketViewController.m; sourceTree = "<group>"; };
 		F129EC661DDEB13C00D5E9FF /* LuckyRedPacketViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LuckyRedPacketViewController.xib; sourceTree = "<group>"; };
 		F129EC671DDEB13C00D5E9FF /* UnluckyRedPacketViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnluckyRedPacketViewController.h; sourceTree = "<group>"; };
 		F129EC681DDEB13C00D5E9FF /* UnluckyRedPacketViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnluckyRedPacketViewController.m; sourceTree = "<group>"; };
 		F129EC691DDEB13C00D5E9FF /* UnluckyRedPacketViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UnluckyRedPacketViewController.xib; sourceTree = "<group>"; };
+		F129EC701DDEB39F00D5E9FF /* OpeningRedPacketViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpeningRedPacketViewController.h; sourceTree = "<group>"; };
+		F129EC711DDEB39F00D5E9FF /* OpeningRedPacketViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpeningRedPacketViewController.m; sourceTree = "<group>"; };
+		F129EC721DDEB39F00D5E9FF /* OpeningRedPacketViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OpeningRedPacketViewController.xib; sourceTree = "<group>"; };
+		F129EC751DDEB3C500D5E9FF /* OpenRedPacketEndViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenRedPacketEndViewController.h; sourceTree = "<group>"; };
+		F129EC761DDEB3C500D5E9FF /* OpenRedPacketEndViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenRedPacketEndViewController.m; sourceTree = "<group>"; };
+		F129EC771DDEB3C500D5E9FF /* OpenRedPacketEndViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OpenRedPacketEndViewController.xib; sourceTree = "<group>"; };
+		F129EC7A1DDEE46700D5E9FF /* OpenErrorRedPacketViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenErrorRedPacketViewController.h; sourceTree = "<group>"; };
+		F129EC7B1DDEE46700D5E9FF /* OpenErrorRedPacketViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenErrorRedPacketViewController.m; sourceTree = "<group>"; };
+		F129EC7C1DDEE46700D5E9FF /* OpenErrorRedPacketViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OpenErrorRedPacketViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,10 +176,6 @@
 			isa = PBXGroup;
 			children = (
 				F129EC631DDEB13C00D5E9FF /* ViewControllers */,
-				F10B29D51DDD88CF00E5E4CE /* SendRedPackagewController.h */,
-				F10B29D61DDD88CF00E5E4CE /* SendRedPackagewController.m */,
-				F129EC551DDEACD700D5E9FF /* OpenRedPacketViewController.h */,
-				F129EC561DDEACD700D5E9FF /* OpenRedPacketViewController.m */,
 			);
 			path = RedPackage;
 			sourceTree = "<group>";
@@ -172,6 +183,10 @@
 		F129EC631DDEB13C00D5E9FF /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				F10B29D51DDD88CF00E5E4CE /* SendRedPackagewController.h */,
+				F10B29D61DDD88CF00E5E4CE /* SendRedPackagewController.m */,
+				F129EC551DDEACD700D5E9FF /* OpenRedPacketViewController.h */,
+				F129EC561DDEACD700D5E9FF /* OpenRedPacketViewController.m */,
 				F129EC6E1DDEB19000D5E9FF /* OpenRedPacket */,
 				F129EC6F1DDEB1A800D5E9FF /* SendRedPacket */,
 			);
@@ -181,6 +196,15 @@
 		F129EC6E1DDEB19000D5E9FF /* OpenRedPacket */ = {
 			isa = PBXGroup;
 			children = (
+				F129EC701DDEB39F00D5E9FF /* OpeningRedPacketViewController.h */,
+				F129EC711DDEB39F00D5E9FF /* OpeningRedPacketViewController.m */,
+				F129EC721DDEB39F00D5E9FF /* OpeningRedPacketViewController.xib */,
+				F129EC751DDEB3C500D5E9FF /* OpenRedPacketEndViewController.h */,
+				F129EC761DDEB3C500D5E9FF /* OpenRedPacketEndViewController.m */,
+				F129EC771DDEB3C500D5E9FF /* OpenRedPacketEndViewController.xib */,
+				F129EC7A1DDEE46700D5E9FF /* OpenErrorRedPacketViewController.h */,
+				F129EC7B1DDEE46700D5E9FF /* OpenErrorRedPacketViewController.m */,
+				F129EC7C1DDEE46700D5E9FF /* OpenErrorRedPacketViewController.xib */,
 			);
 			name = OpenRedPacket;
 			sourceTree = "<group>";
@@ -305,7 +329,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F129EC6D1DDEB13C00D5E9FF /* UnluckyRedPacketViewController.xib in Resources */,
+				F129EC741DDEB39F00D5E9FF /* OpeningRedPacketViewController.xib in Resources */,
 				F10B29B11DDD85CB00E5E4CE /* LaunchScreen.storyboard in Resources */,
+				F129EC7E1DDEE46700D5E9FF /* OpenErrorRedPacketViewController.xib in Resources */,
+				F129EC791DDEB3C500D5E9FF /* OpenRedPacketEndViewController.xib in Resources */,
 				F10B29AE1DDD85CB00E5E4CE /* Assets.xcassets in Resources */,
 				F129EC6B1DDEB13C00D5E9FF /* LuckyRedPacketViewController.xib in Resources */,
 				F10B29AC1DDD85CB00E5E4CE /* Main.storyboard in Resources */,
@@ -334,10 +361,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				F10B29A91DDD85CB00E5E4CE /* ViewController.m in Sources */,
+				F129EC781DDEB3C500D5E9FF /* OpenRedPacketEndViewController.m in Sources */,
 				F129EC6C1DDEB13C00D5E9FF /* UnluckyRedPacketViewController.m in Sources */,
+				F129EC731DDEB39F00D5E9FF /* OpeningRedPacketViewController.m in Sources */,
 				F10B29A61DDD85CB00E5E4CE /* AppDelegate.m in Sources */,
 				F129EC571DDEACD700D5E9FF /* OpenRedPacketViewController.m in Sources */,
 				F129EC6A1DDEB13C00D5E9FF /* LuckyRedPacketViewController.m in Sources */,
+				F129EC7D1DDEE46700D5E9FF /* OpenErrorRedPacketViewController.m in Sources */,
 				F10B29D81DDD88CF00E5E4CE /* SendRedPackagewController.m in Sources */,
 				F10B29A31DDD85CB00E5E4CE /* main.m in Sources */,
 			);

@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "SendRedPackagewController.h"
+#import "OpenRedPacketViewController.h"
 
 @interface ViewController ()
 
@@ -17,6 +18,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self.view setBackgroundColor:[UIColor blackColor]];
     
     UIView *redPackageView = [[UIView alloc] initWithFrame:CGRectMake(0, 300, 200, 80)];
     redPackageView.backgroundColor = [UIColor redColor];
@@ -38,14 +41,17 @@
 - (void)sendRedPacketBtnAction:(UIButton *)sender {
     
     SendRedPackagewController *VC = [SendRedPackagewController new];
-    VC.view.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.6];
+    VC.view.backgroundColor = [UIColor clearColor];
     VC.modalPresentationStyle = UIModalPresentationOverCurrentContext;
     [self presentViewController:VC animated:YES completion:nil];
-    
 }
 
 - (void)redPackageViewAction:(UITapGestureRecognizer *)sender {
     
+    OpenRedPacketViewController *VC = [OpenRedPacketViewController new];
+    VC.view.backgroundColor = [UIColor clearColor];
+    VC.modalPresentationStyle = UIModalPresentationOverCurrentContext;
+    [self presentViewController:VC animated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {
