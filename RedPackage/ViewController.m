@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "SendRedPackagewController.h"
 
 @interface ViewController ()
 
@@ -16,9 +17,36 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    UIView *redPackageView = [[UIView alloc] initWithFrame:CGRectMake(0, 300, 200, 80)];
+    redPackageView.backgroundColor = [UIColor redColor];
+    [self.view addSubview:redPackageView];
+
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(redPackageViewAction:)];
+    [redPackageView addGestureRecognizer:tap];
+    
+    UIButton *sendRedPacketBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    sendRedPacketBtn.frame = CGRectMake(self.view.frame.size.width-100, self.view.frame.size.height-200, 50, 50);
+    [sendRedPacketBtn setBackgroundColor:[UIColor redColor]];
+    [sendRedPacketBtn setTitle:@"发" forState:UIControlStateNormal];
+    [sendRedPacketBtn addTarget:self action:@selector(sendRedPacketBtnAction:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:sendRedPacketBtn];
+    
     // Do any additional setup after loading the view, typically from a nib.
 }
 
+- (void)sendRedPacketBtnAction:(UIButton *)sender {
+    
+    SendRedPackagewController *VC = [SendRedPackagewController new];
+    VC.view.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.6];
+    VC.modalPresentationStyle = UIModalPresentationOverCurrentContext;
+    [self presentViewController:VC animated:YES completion:nil];
+    
+}
+
+- (void)redPackageViewAction:(UITapGestureRecognizer *)sender {
+    
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
