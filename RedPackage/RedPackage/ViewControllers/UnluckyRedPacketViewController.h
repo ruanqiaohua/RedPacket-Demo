@@ -10,6 +10,8 @@
 
 @interface UnluckyRedPacketViewController : UIViewController
 
+@property (nonatomic, weak) IBOutlet UITextField *cashTextField;
+
 @property (nonatomic, weak) IBOutlet UIButton *luckyRedPacketBtn;
 
 @property (nonatomic, weak) IBOutlet UIButton *unluckyRedPacketBtn;

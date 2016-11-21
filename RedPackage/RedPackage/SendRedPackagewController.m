@@ -111,6 +111,18 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     
+    if ([_luckyRedPacketVC.cashTextField isFirstResponder] || [_luckyRedPacketVC.blessTextField isFirstResponder] || [_unluckyRedPacketVC.cashTextField isFirstResponder]) {
+        [self.view endEditing:YES];
+        return;
+    }
+    if (_luckyRedPacketVC.redNumPickView) {
+        [_luckyRedPacketVC hiddenRedNumPickView];
+        return;
+    }
+    if (_luckyRedPacketVC.redRangePickView) {
+        [_luckyRedPacketVC hiddenRedRangePickView];
+        return;
+    }
     UIView *view = touches.anyObject.view;
     if (view == self.view || view == _luckyRedPacketVC.view || view == _unluckyRedPacketVC.view) {
         [self dismissViewControllerAnimated:YES completion:nil];

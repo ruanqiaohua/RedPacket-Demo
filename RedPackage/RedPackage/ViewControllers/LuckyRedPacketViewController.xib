@@ -13,7 +13,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LuckyRedPacketViewController">
             <connections>
+                <outlet property="blessTextField" destination="bJx-WF-CjX" id="4fi-9Z-5vr"/>
+                <outlet property="cashTextField" destination="0Dr-lA-gyb" id="bM6-eI-pJ4"/>
                 <outlet property="luckyRedPacketBtn" destination="qv1-Mz-RhZ" id="Eog-XD-3nz"/>
+                <outlet property="redNumBtn" destination="CZl-bi-D3z" id="5o9-ej-qvq"/>
+                <outlet property="redRangeBtn" destination="zhN-fb-IW1" id="HK5-FO-IDi"/>
                 <outlet property="unluckyRedPacketBtn" destination="jsI-uP-eVw" id="b12-Gs-kh9"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -69,13 +73,6 @@
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cyo-Dk-iTE">
-                            <rect key="frame" x="82.5" y="272" width="182.5" height="30.5"/>
-                            <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
-                            <constraints>
-                                <constraint firstAttribute="width" secondItem="cyo-Dk-iTE" secondAttribute="height" multiplier="6:1" id="L98-BE-tbl"/>
-                            </constraints>
-                        </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fxe-3G-PZG">
                             <rect key="frame" x="82.5" y="147.5" width="55.5" height="29.5"/>
                             <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
@@ -90,12 +87,21 @@
                                 <constraint firstAttribute="width" secondItem="WNZ-Oa-wHe" secondAttribute="height" multiplier="30:16" id="AEa-co-FUJ"/>
                             </constraints>
                         </button>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Dr-lA-gyb">
+                            <rect key="frame" x="208.5" y="147.5" width="56" height="29.5"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                        </textField>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CZl-bi-D3z">
                             <rect key="frame" x="82.5" y="188.5" width="182.5" height="30.5"/>
                             <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="CZl-bi-D3z" secondAttribute="height" multiplier="6:1" id="wAk-xX-QTd"/>
                             </constraints>
+                            <connections>
+                                <action selector="redNumBtnAction:" destination="-1" eventType="touchUpInside" id="XQL-Jr-TaP"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zhN-fb-IW1">
                             <rect key="frame" x="82.5" y="230" width="182.5" height="30.5"/>
@@ -103,6 +109,9 @@
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="zhN-fb-IW1" secondAttribute="height" multiplier="6:1" id="WR3-5T-VYc"/>
                             </constraints>
+                            <connections>
+                                <action selector="redRangeBtnAction:" destination="-1" eventType="touchUpInside" id="m32-ht-CN8"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RfA-TT-lj0">
                             <rect key="frame" x="146" y="148" width="55" height="29.5"/>
@@ -125,6 +134,19 @@
                             </constraints>
                             <state key="normal" title="手气红包"/>
                         </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cyo-Dk-iTE">
+                            <rect key="frame" x="82.5" y="271.5" width="182.5" height="30.5"/>
+                            <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="cyo-Dk-iTE" secondAttribute="height" multiplier="6:1" id="L98-BE-tbl"/>
+                            </constraints>
+                        </button>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bJx-WF-CjX">
+                            <rect key="frame" x="82.5" y="271.5" width="183" height="30"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                        </textField>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Par-HP-zZ0">
                             <rect key="frame" x="27" y="322.5" width="226" height="37.5"/>
                             <constraints>
@@ -138,6 +160,8 @@
                         <constraint firstItem="qv1-Mz-RhZ" firstAttribute="top" secondItem="121-bZ-aLY" secondAttribute="top" id="5CQ-e8-bgq"/>
                         <constraint firstAttribute="trailing" secondItem="qv1-Mz-RhZ" secondAttribute="trailing" id="6ai-be-ZEF"/>
                         <constraint firstItem="cyo-Dk-iTE" firstAttribute="leading" secondItem="4Fr-h1-8M0" secondAttribute="trailing" constant="8" id="7YA-hC-s9a"/>
+                        <constraint firstItem="WNZ-Oa-wHe" firstAttribute="bottom" secondItem="0Dr-lA-gyb" secondAttribute="bottom" id="870-Af-MDX"/>
+                        <constraint firstItem="bJx-WF-CjX" firstAttribute="bottom" secondItem="cyo-Dk-iTE" secondAttribute="bottom" id="8kp-DV-VH1"/>
                         <constraint firstItem="LCO-6X-7ra" firstAttribute="leading" secondItem="121-bZ-aLY" secondAttribute="leading" constant="15" id="D6c-eq-0cV"/>
                         <constraint firstItem="Fxe-3G-PZG" firstAttribute="leading" secondItem="AP5-57-XhC" secondAttribute="trailing" constant="8" id="DHQ-NC-wxl"/>
                         <constraint firstItem="AP5-57-XhC" firstAttribute="top" secondItem="jsI-uP-eVw" secondAttribute="bottom" constant="6.5" id="DLS-ch-Mah"/>
@@ -145,19 +169,23 @@
                         <constraint firstItem="WNZ-Oa-wHe" firstAttribute="width" secondItem="Fxe-3G-PZG" secondAttribute="width" id="Eww-R9-cS2"/>
                         <constraint firstItem="qv1-Mz-RhZ" firstAttribute="width" secondItem="jsI-uP-eVw" secondAttribute="width" id="FEY-3A-dCj"/>
                         <constraint firstItem="AP5-57-XhC" firstAttribute="leading" secondItem="121-bZ-aLY" secondAttribute="leading" constant="15" id="H1C-eV-15J"/>
+                        <constraint firstItem="bJx-WF-CjX" firstAttribute="trailing" secondItem="cyo-Dk-iTE" secondAttribute="trailing" id="HJV-Mg-aqo"/>
                         <constraint firstItem="Par-HP-zZ0" firstAttribute="top" secondItem="cyo-Dk-iTE" secondAttribute="bottom" constant="20" id="I1u-uu-lVy"/>
                         <constraint firstItem="RfA-TT-lj0" firstAttribute="width" secondItem="Fxe-3G-PZG" secondAttribute="width" id="M2f-cE-9IQ"/>
                         <constraint firstItem="4Fr-h1-8M0" firstAttribute="width" secondItem="121-bZ-aLY" secondAttribute="width" multiplier="60:280" id="Mf6-Wl-clk"/>
+                        <constraint firstItem="bJx-WF-CjX" firstAttribute="top" secondItem="cyo-Dk-iTE" secondAttribute="top" id="Ncg-RO-5pG"/>
                         <constraint firstAttribute="trailing" secondItem="WNZ-Oa-wHe" secondAttribute="trailing" constant="15" id="PGr-NS-2CW"/>
                         <constraint firstItem="qv1-Mz-RhZ" firstAttribute="leading" secondItem="jsI-uP-eVw" secondAttribute="trailing" id="QTF-Aq-bIs"/>
                         <constraint firstItem="4Fr-h1-8M0" firstAttribute="top" secondItem="LCO-6X-7ra" secondAttribute="bottom" constant="8" id="UAb-NH-quO"/>
                         <constraint firstItem="WNZ-Oa-wHe" firstAttribute="centerY" secondItem="AP5-57-XhC" secondAttribute="centerY" id="UZt-in-7gP"/>
                         <constraint firstItem="g9Y-9Q-As9" firstAttribute="leading" secondItem="121-bZ-aLY" secondAttribute="leading" constant="15" id="Uga-DC-aih"/>
+                        <constraint firstItem="WNZ-Oa-wHe" firstAttribute="top" secondItem="0Dr-lA-gyb" secondAttribute="top" id="Ugj-bA-svO"/>
                         <constraint firstItem="zhN-fb-IW1" firstAttribute="centerY" secondItem="LCO-6X-7ra" secondAttribute="centerY" id="Wx0-sK-mJo"/>
                         <constraint firstItem="CZl-bi-D3z" firstAttribute="leading" secondItem="g9Y-9Q-As9" secondAttribute="trailing" constant="8" id="Ymv-FU-yfF"/>
                         <constraint firstItem="Par-HP-zZ0" firstAttribute="leading" secondItem="121-bZ-aLY" secondAttribute="leading" constant="27" id="Yqe-Ah-hWa"/>
                         <constraint firstItem="jsI-uP-eVw" firstAttribute="top" secondItem="121-bZ-aLY" secondAttribute="top" id="ZCv-Su-krV"/>
                         <constraint firstItem="Fxe-3G-PZG" firstAttribute="centerY" secondItem="AP5-57-XhC" secondAttribute="centerY" id="a0q-jc-Ars"/>
+                        <constraint firstItem="WNZ-Oa-wHe" firstAttribute="trailing" secondItem="0Dr-lA-gyb" secondAttribute="trailing" id="cYx-oG-iVO"/>
                         <constraint firstAttribute="trailing" secondItem="cyo-Dk-iTE" secondAttribute="trailing" constant="15" id="d1W-pf-rGa"/>
                         <constraint firstItem="cyo-Dk-iTE" firstAttribute="centerY" secondItem="4Fr-h1-8M0" secondAttribute="centerY" id="eGE-Ap-asu"/>
                         <constraint firstItem="4Fr-h1-8M0" firstAttribute="leading" secondItem="121-bZ-aLY" secondAttribute="leading" constant="15" id="ee9-6A-mwT"/>
@@ -168,6 +196,7 @@
                         <constraint firstAttribute="trailing" secondItem="Par-HP-zZ0" secondAttribute="trailing" constant="27" id="is6-Yj-ece"/>
                         <constraint firstItem="LCO-6X-7ra" firstAttribute="top" secondItem="g9Y-9Q-As9" secondAttribute="bottom" constant="8" id="je1-6G-9PV"/>
                         <constraint firstItem="CZl-bi-D3z" firstAttribute="centerY" secondItem="g9Y-9Q-As9" secondAttribute="centerY" id="lem-7e-RpG"/>
+                        <constraint firstItem="bJx-WF-CjX" firstAttribute="leading" secondItem="cyo-Dk-iTE" secondAttribute="leading" id="m00-PB-vYW"/>
                         <constraint firstAttribute="trailing" secondItem="zhN-fb-IW1" secondAttribute="trailing" constant="15" id="m08-ul-t8G"/>
                         <constraint firstItem="WNZ-Oa-wHe" firstAttribute="leading" secondItem="RfA-TT-lj0" secondAttribute="trailing" constant="8" id="o4D-HZ-6vN"/>
                         <constraint firstAttribute="width" secondItem="121-bZ-aLY" secondAttribute="height" multiplier="560:834" id="tJ0-BS-TfW"/>
@@ -176,6 +205,7 @@
                         <constraint firstAttribute="trailing" secondItem="CZl-bi-D3z" secondAttribute="trailing" constant="15" id="wSo-xG-gQJ"/>
                         <constraint firstItem="RfA-TT-lj0" firstAttribute="centerY" secondItem="AP5-57-XhC" secondAttribute="centerY" id="xvd-hI-ZFz"/>
                         <constraint firstItem="jsI-uP-eVw" firstAttribute="leading" secondItem="121-bZ-aLY" secondAttribute="leading" id="yAJ-54-P2e"/>
+                        <constraint firstItem="WNZ-Oa-wHe" firstAttribute="leading" secondItem="0Dr-lA-gyb" secondAttribute="leading" id="zJl-e2-8cY"/>
                     </constraints>
                 </view>
             </subviews>
@@ -185,7 +215,7 @@
                 <constraint firstItem="121-bZ-aLY" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="UJ0-nE-HyN"/>
                 <constraint firstItem="121-bZ-aLY" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="560:750" id="i4u-C5-GtK"/>
             </constraints>
-            <point key="canvasLocation" x="33" y="54"/>
+            <point key="canvasLocation" x="32.5" y="53.5"/>
         </view>
     </objects>
 </document>
