@@ -115,12 +115,11 @@
         [self.view endEditing:YES];
         return;
     }
-    if (_luckyRedPacketVC.redNumPickView) {
+    if (_luckyRedPacketVC.redNumPickView || _luckyRedPacketVC.redRangePickView || _unluckyRedPacketVC.redNumPickView || _unluckyRedPacketVC.badNumPickView) {
         [_luckyRedPacketVC hiddenRedNumPickView];
-        return;
-    }
-    if (_luckyRedPacketVC.redRangePickView) {
         [_luckyRedPacketVC hiddenRedRangePickView];
+        [_unluckyRedPacketVC hiddenRedNumPickView];
+        [_unluckyRedPacketVC hiddenBadNumPickView];
         return;
     }
     UIView *view = touches.anyObject.view;

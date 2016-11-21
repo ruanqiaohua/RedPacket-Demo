@@ -13,8 +13,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UnluckyRedPacketViewController">
             <connections>
+                <outlet property="badNumBtn" destination="zhN-fb-IW1" id="3uV-41-ihP"/>
                 <outlet property="cashTextField" destination="ftx-9J-TDR" id="9Jf-kd-cjO"/>
                 <outlet property="luckyRedPacketBtn" destination="qv1-Mz-RhZ" id="8Wl-aq-3Eq"/>
+                <outlet property="redNumBtn" destination="CZl-bi-D3z" id="c1l-e9-7VJ"/>
                 <outlet property="unluckyRedPacketBtn" destination="jsI-uP-eVw" id="5bN-gw-jyl"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -93,6 +95,9 @@
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="CZl-bi-D3z" secondAttribute="height" multiplier="6:1" id="wAk-xX-QTd"/>
                             </constraints>
+                            <connections>
+                                <action selector="redNumBtnAction:" destination="-1" eventType="touchUpInside" id="Z0U-w9-Cxy"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zhN-fb-IW1">
                             <rect key="frame" x="82.5" y="230.5" width="182.5" height="30"/>
@@ -100,6 +105,9 @@
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="zhN-fb-IW1" secondAttribute="height" multiplier="6:1" id="WR3-5T-VYc"/>
                             </constraints>
+                            <connections>
+                                <action selector="badNumBtnAction:" destination="-1" eventType="touchUpInside" id="83Z-qj-vPE"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RfA-TT-lj0">
                             <rect key="frame" x="146" y="148" width="55" height="29.5"/>

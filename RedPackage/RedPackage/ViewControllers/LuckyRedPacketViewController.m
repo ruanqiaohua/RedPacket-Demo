@@ -10,9 +10,10 @@
 
 @interface LuckyRedPacketViewController ()<UIPickerViewDelegate,UIPickerViewDataSource>
 
-@property (nonatomic, copy) NSArray *redNums;//红包个数
-
-@property (nonatomic, copy) NSArray *sendRanges;//发送范围
+/**红包个数*/
+@property (nonatomic, copy) NSArray *redNums;
+/**发送范围*/
+@property (nonatomic, copy) NSArray *sendRanges;
 
 @end
 
@@ -20,7 +21,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
     _redNums = @[@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10"];
     [_redNumBtn setTitle:[NSString stringWithFormat:@"%@",_redNums.firstObject] forState:UIControlStateNormal];
 
@@ -130,6 +131,8 @@
         [_redRangeBtn setTitle:[NSString stringWithFormat:@"%@",_sendRanges[row]] forState:UIControlStateNormal];
     }
 }
+
+#pragma mark - Other
 
 - (void)hiddenRedNumPickView {
     
