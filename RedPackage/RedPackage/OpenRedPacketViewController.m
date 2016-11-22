@@ -59,9 +59,9 @@
     //请求服务端开始抢红包
     
     //成功
-    //[self chooseViewControllerView:1000];
+    [self chooseViewControllerView:1000];
     //红包抢完了
-    [self chooseViewControllerView:1002];
+    //[self chooseViewControllerView:1002];
 }
 
 - (void)chooseViewControllerView:(NSInteger)index {

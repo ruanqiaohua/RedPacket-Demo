@@ -8,8 +8,10 @@
 
 #import "LuckyRedPacketViewController.h"
 
-@interface LuckyRedPacketViewController ()<UIPickerViewDelegate,UIPickerViewDataSource>
+@interface LuckyRedPacketViewController ()<UIPickerViewDelegate,UIPickerViewDataSource,UITextFieldDelegate>
 
+/**可选聊币*/
+@property (nonatomic, copy) NSArray *cashNums;
 /**红包个数*/
 @property (nonatomic, copy) NSArray *redNums;
 /**发送范围*/
@@ -22,22 +24,31 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    _redNums = @[@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10"];
-    [_redNumBtn setTitle:[NSString stringWithFormat:@"%@",_redNums.firstObject] forState:UIControlStateNormal];
-
-    _sendRanges = @[@"本房间",@"所有房间"];
-    [_redRangeBtn setTitle:[NSString stringWithFormat:@"%@",_sendRanges.firstObject] forState:UIControlStateNormal];
+    self.cashNums = @[@"100",@"200",@"300"];
+    self.redNums = @[@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10"];
+    self.sendRanges = @[@"本房间",@"所有房间"];
     
     // Do any additional setup after loading the view.
 }
 
+- (void)setCashNums:(NSArray *)cashNums {
+    _cashNums = cashNums;
+    for (int i=0; i<_cashChooseBtns.count; i++) {
+        UIButton *chooseBtn = _cashChooseBtns[i];
+        NSString *text = cashNums[i];
+        [chooseBtn setTitle:text forState:UIControlStateNormal];
+    }
+}
+
 - (void)setRedNums:(NSMutableArray *)redNums {
     _redNums = redNums;
+    [_redNumBtn setTitle:[NSString stringWithFormat:@"%@",_redNums.firstObject] forState:UIControlStateNormal];
     [_redNumPickView reloadAllComponents];
 }
 
 - (void)setSendRanges:(NSMutableArray *)sendRanges {
     _sendRanges = sendRanges;
+    [_redRangeBtn setTitle:[NSString stringWithFormat:@"%@",_sendRanges.firstObject] forState:UIControlStateNormal];
     [_redRangePickView reloadAllComponents];
 }
 
@@ -130,6 +141,41 @@
     } else {
         [_redRangeBtn setTitle:[NSString stringWithFormat:@"%@",_sendRanges[row]] forState:UIControlStateNormal];
     }
+}
+
+#pragma mark - UITextFieldDelegate
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField {
+    
+    if (textField == _blessTextField) {
+        [UIView animateWithDuration:0.2 animations:^{
+            self.view.frame = CGRectOffset(self.view.frame, 0, -100);
+        }];
+    }
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField {
+    
+    if (textField == _blessTextField) {
+        [UIView animateWithDuration:0.2 animations:^{
+            self.view.frame = CGRectOffset(self.view.frame, 0, 100);
+        }];
+    } else if (textField == _cashTextField) {
+        NSInteger num = [textField.text integerValue];
+        if (num < 500) {
+            textField.text = nil;
+            NSLog(@"不低于500聊币");
+            return;
+        }
+    }
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    
+    if (textField == _blessTextField) {
+        [textField resignFirstResponder];
+    }
+    return NO;
 }
 
 #pragma mark - Other

@@ -8,7 +8,10 @@
 
 #import "UnluckyRedPacketViewController.h"
 
-@interface UnluckyRedPacketViewController ()<UIPickerViewDelegate,UIPickerViewDataSource>
+@interface UnluckyRedPacketViewController ()<UIPickerViewDelegate,UIPickerViewDataSource,UITextFieldDelegate>
+
+/**可选聊币*/
+@property (nonatomic, copy) NSArray *cashNums;
 /**红包个数*/
 @property (nonatomic, copy) NSArray *redNums;
 /**厄运尾数*/
@@ -20,13 +23,32 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _redNums = @[@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10"];
-    [_redNumBtn setTitle:[NSString stringWithFormat:@"%@",_redNums.firstObject] forState:UIControlStateNormal];
     
-    _badNums = @[@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10"];
-    [_badNumBtn setTitle:[NSString stringWithFormat:@"%@",_badNums.firstObject] forState:UIControlStateNormal];
-    
+    self.cashNums = @[@"100",@"200",@"300"];
+    self.redNums = @[@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10"];
+    self.badNums = @[@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10"];
     // Do any additional setup after loading the view.
+}
+
+- (void)setCashNums:(NSArray *)cashNums {
+    _cashNums = cashNums;
+    for (int i=0; i<_cashChooseBtns.count; i++) {
+        UIButton *chooseBtn = _cashChooseBtns[i];
+        NSString *text = cashNums[i];
+        [chooseBtn setTitle:text forState:UIControlStateNormal];
+    }
+}
+
+- (void)setRedNums:(NSArray *)redNums {
+    _redNums = redNums;
+    [_redNumBtn setTitle:[NSString stringWithFormat:@"%@",_redNums.firstObject] forState:UIControlStateNormal];
+    [_redNumPickView reloadAllComponents];
+}
+
+- (void)setBadNums:(NSArray *)badNums {
+    _badNums = badNums;
+    [_badNumBtn setTitle:[NSString stringWithFormat:@"%@",_badNums.firstObject] forState:UIControlStateNormal];
+    [_badNumPickView reloadAllComponents];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -122,6 +144,19 @@
     } else if (pickerView == _badNumPickView) {
         [_badNumBtn setTitle:[NSString stringWithFormat:@"%@",_badNums[row]] forState:UIControlStateNormal];
     }
+}
+
+#pragma mark - UITextFieldDelegate
+
+- (void)textFieldDidEndEditing:(UITextField *)textField {
+    
+    NSInteger num = [textField.text integerValue];
+    if (num < 500) {
+        textField.text = nil;
+        NSLog(@"不低于500聊币");
+        return;
+    }
+    
 }
 
 #pragma mark - Other

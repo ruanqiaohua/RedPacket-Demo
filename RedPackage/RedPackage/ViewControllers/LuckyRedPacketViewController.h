@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface LuckyRedPacketViewController : UIViewController
-
+/**可选聊币*/
+@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *cashChooseBtns;
 /**红包个数选择按钮*/
 @property (nonatomic, weak) IBOutlet UIButton *redNumBtn;
 /**红包个数选择框*/
